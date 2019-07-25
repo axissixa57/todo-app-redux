@@ -18,7 +18,6 @@ export function todos(state = initialState, action) {
       return { ...state, [action.id]: { ...todo, completed: !todo.completed } };
     }
     case DELETE_TODO: {
-      // delete - произвольное название - объект, кот. должен быть удалён
       const { [action.id]: deleted, ...rest } = state;
       return rest;
     }
@@ -29,8 +28,7 @@ export function todos(state = initialState, action) {
     case RECEIVE_TODOS: {
       const newState = {};
       action.todos.forEach(todo => (newState[todo.id] = todo));
-
-      return newState; // {1: todo1, 2: todo2, ...}
+      return newState;
     }
     case FAIL_GETTING_TODOS: {
       // TODO

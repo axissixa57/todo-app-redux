@@ -58,7 +58,6 @@ export function addTodo(text) {
         title: text,
         completed: false,
       })
-      // при добавлении нового todo, id всегда одинаковый, поэтому и перетирает последущие добавленые
       .then(res => dispatch({ type: ADD_TODO, todo: res.data }));
   };
 }

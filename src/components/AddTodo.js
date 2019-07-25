@@ -11,7 +11,6 @@ export class AddTodoUI extends Component {
 
     onSubmit = (e) => {
         e.preventDefault();
-        // пушим todo в store
         this.props.addTodo(this.state.title);
         this.setState({ title: '' });
     }
@@ -52,8 +51,6 @@ const mapDispatchToProps = dispatch => {
   }
 }
 
-// connect позволяет связать хранилище и компонент
-// отобразится в this.props у component AddTodoUI
 const AddTodo = connect(
   null,
   mapDispatchToProps
