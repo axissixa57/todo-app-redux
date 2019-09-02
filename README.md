@@ -1,5 +1,5 @@
 # To-Do List App
-A Simple To-Do List app built with Redux
+A Simple To-Do List app built with Redux. [Take a look](https://axissixa57.github.io/todo-app-redux)
 
 ### Clone
 Clone the Project
